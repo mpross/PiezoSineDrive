@@ -36,15 +36,12 @@ for j=1:8
     
     hold on
     figure(1)
-    plot(time,BRS);
-    
-    figure(3)
-    loglog(F,abs(ABRS));
+    plot(time,BRS);    
     
 end
-
-startTime=5.7e4*sampF;
-endTime=length(rawTime);
+% Make sure this is integer multiples of period
+startTime=5.71e4*sampF;
+endTime=startTime+5*50*sampF;
 
 time=rawTime(startTime:endTime);
 BRS=7e-6/4*rawBRS(startTime:endTime);
@@ -58,7 +55,7 @@ amp=[amp;norm]./norm;
 driveF=[driveF 0.2];
 
 figure(2)
-plot(rawTime,rawBRS);
+plot(time,BRS);
 
 fun=@(x,w)(w.^2-M*g*x(1)/I)./sqrt((w.^2-w0^2).^2+w0^4/Q^2);
 x0=3e-7;
@@ -66,9 +63,12 @@ options = optimset('Display','iter','TolX', 1e-30, 'TolFun', 1e-10, 'MaxFunEvals
 d=lsqcurvefit(fun,x0,driveF,amp',0,[],options)
 w=1e-4:1e-4:1;
 
-d=3.6e-7
+d=14e-6
+
+figure(3)
+loglog(F,abs(ABRS));
 
 figure(4)
-loglog(driveF,amp','.',w,abs((w.^2-M*g*d/I)./sqrt((w.^2-w0^2).^2+w0^4/Q^2)));
+loglog(driveF,amp','.',w,abs((w.^2-M*g*d/I/(4*pi^2))./sqrt((w.^2-w0^2).^2+w0^4/Q^2)));
 ylim([1e-1,1e1]);
 grid on
