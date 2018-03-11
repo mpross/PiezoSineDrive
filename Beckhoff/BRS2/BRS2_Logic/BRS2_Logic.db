@@ -1,0 +1,145 @@
+record(longin,"H1:ISI-GND_BRS_ETMY_TEMPR") {
+	field(DESC,"Tempurature Right")
+	field(SCAN,"I/O Intr")
+	field(DTYP,"tcat")
+	field(INP,"@tc://10.0.0.103.1.1:851/61472/128018:2")
+	field(TSE,"-2")
+	field(PINI,"0")
+	field(EGU,"1/100 C")
+	field(PREC,"3")
+}
+record(bi,"H1:ISI-GND_BRS_ETMY_AMPBIT") {
+	field(DESC,"Amplitude Status")
+	field(SCAN,"I/O Intr")
+	field(DTYP,"tcat")
+	field(INP,"@tc://10.0.0.103.1.1:851/61488/256022:1")
+	field(TSE,"-2")
+	field(PINI,"0")
+	field(ONAM,"GOOD")
+	field(ZNAM,"BAD")
+}
+record(bi,"H1:ISI-GND_BRS_ETMY_DAMPBIT") {
+	field(DESC,"Damping Status")
+	field(SCAN,"I/O Intr")
+	field(DTYP,"tcat")
+	field(INP,"@tc://10.0.0.103.1.1:851/61488/256030:1")
+	field(TSE,"-2")
+	field(PINI,"0")
+	field(ONAM,"Damping")
+	field(ZNAM,"Not Damping")
+}
+record(bi,"H1:ISI-GND_BRS_ETMY_CBIT") {
+	field(DESC,"C# Running Status")
+	field(SCAN,"I/O Intr")
+	field(DTYP,"tcat")
+	field(INP,"@tc://10.0.0.103.1.1:851/61488/256032:1")
+	field(TSE,"-2")
+	field(PINI,"0")
+	field(ONAM,"GOOD")
+	field(ZNAM,"BAD")
+}
+record(longin,"H1:ISI-GND_BRS_ETMY_VEL") {
+	field(DESC,"Sqrt")
+	field(SCAN,"I/O Intr")
+	field(DTYP,"tcat")
+	field(INP,"@tc://10.0.0.103.1.1:851/16416/24:2")
+	field(TSE,"-2")
+	field(PINI,"0")
+	field(HOPR,"500")
+	field(LOPR,"-500")
+	field(PREC,"3")
+}
+record(longin,"H1:ISI-GND_BRS_ETMY_LIGHTSRC") {
+	field(DESC,"Light Source Status")
+	field(SCAN,"I/O Intr")
+	field(DTYP,"tcat")
+	field(INP,"@tc://10.0.0.103.1.1:851/16416/36:2")
+	field(TSE,"-2")
+	field(PINI,"0")
+	field(ONAM,"GOOD")
+	field(ZNAM,"BAD")
+}
+record(longin,"H1:ISI-GND_BRS_ETMY_CAMERA") {
+	field(DESC,"Camera Status")
+	field(SCAN,"I/O Intr")
+	field(DTYP,"tcat")
+	field(INP,"@tc://10.0.0.103.1.1:851/16416/40:2")
+	field(TSE,"-2")
+	field(PINI,"0")
+	field(ONAM,"GOOD")
+	field(ZNAM,"BAD")
+}
+record(bi,"H1:ISI-GND_BRS_ETMY_DRIFTBIT") {
+	field(DESC,"Drift Status")
+	field(SCAN,"I/O Intr")
+	field(DTYP,"tcat")
+	field(INP,"@tc://10.0.0.103.1.1:851/16448/512906:1")
+	field(TSE,"-2")
+	field(PINI,"0")
+	field(ONAM,"GOOD")
+	field(ZNAM,"BAD")
+}
+record(bi,"H1:ISI-GND_BRS_ETMY_MODBIT") {
+	field(DESC,"ISI Modules Status")
+	field(SCAN,"I/O Intr")
+	field(DTYP,"tcat")
+	field(INP,"@tc://10.0.0.103.1.1:851/16448/512907:1")
+	field(TSE,"-2")
+	field(PINI,"0")
+	field(ONAM,"GOOD")
+	field(ZNAM,"BAD")
+}
+record(bi,"H1:ISI-GND_BRS_ETMY_BOXBIT") {
+	field(DESC,"BRS Box Status")
+	field(SCAN,"I/O Intr")
+	field(DTYP,"tcat")
+	field(INP,"@tc://10.0.0.103.1.1:851/16448/512908:1")
+	field(TSE,"-2")
+	field(PINI,"0")
+	field(ONAM,"GOOD")
+	field(ZNAM,"BAD")
+}
+record(bo,"H1:ISI-GND_BRS_ETMY_USER") {
+	field(DESC,"User Damping Control")
+	field(SCAN,"Passive")
+	field(DTYP,"tcat")
+	field(OUT,"@tc://10.0.0.103.1.1:851/16448/512909:1")
+	field(TSE,"-2")
+	field(PINI,"0")
+	field(ONAM,"On")
+	field(ZNAM,"Off")
+}
+record(longin,"H1:ISI-GND_BRS_ETMY_TEMPL") {
+	field(DESC,"Tempurature Left")
+	field(SCAN,"I/O Intr")
+	field(DTYP,"tcat")
+	field(INP,"@tc://10.0.0.103.1.1:851/16448/512912:2")
+	field(TSE,"-2")
+	field(PINI,"0")
+	field(EGU,"1/100 C")
+	field(PREC,"3")
+}
+record(longout,"H1:ISI-GND_BRS_ETMY_LOWTHRESHOLD") {
+	field(DESC,"Lower Damping Threshold")
+	field(SCAN,"Passive")
+	field(DTYP,"tcat")
+	field(OUT,"@tc://10.0.0.103.1.1:851/16448/512914:2")
+	field(TSE,"-2")
+	field(PINI,"0")
+}
+record(longout,"H1:ISI-GND_BRS_ETMY_HIGHTHRESHOLD") {
+	field(DESC,"Upper Damping Threshold")
+	field(SCAN,"Passive")
+	field(DTYP,"tcat")
+	field(OUT,"@tc://10.0.0.103.1.1:851/16448/512916:2")
+	field(TSE,"-2")
+	field(PINI,"0")
+}
+record(ao,"H1:ISI-GND_BRS_ETMY_DAMPTIMEOUT") {
+	field(DESC,"Damping Timeout")
+	field(SCAN,"Passive")
+	field(DTYP,"tcat")
+	field(OUT,"@tc://10.0.0.103.1.1:851/16448/512920:4")
+	field(TSE,"-2")
+	field(PINI,"0")
+}
