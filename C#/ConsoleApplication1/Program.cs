@@ -36,6 +36,8 @@ namespace ConsoleApplication1
             if (scan == true) {
                 freq = startFreq;
                 deltaF = (endFreq - startFreq) / steps;
+                Console.WriteLine(DateTime.Now.ToString("h:mm:ss tt"));
+                Console.WriteLine(freq);
                 while (freq<=endFreq)
                 {
                     time = stopWatch.ElapsedMilliseconds / 1000f;
@@ -60,6 +62,8 @@ namespace ConsoleApplication1
 
                     }
                 }
+                Console.WriteLine("Done!");
+                Console.ReadLine();
             }
             else
             {
